@@ -5,7 +5,9 @@
   "projects": {
     "angular-17": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        //"standalone": false
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -25,9 +27,14 @@
               "src/assets"
             ],
             "styles": [
+              //"node_modules/bootstrap/scss/bootstrap.scss",
+              //"node_modules/bootstrap/font/bootstrap-icons.scss",
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
